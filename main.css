@@ -48,12 +48,14 @@ body
 .info .info__title 
 {
   width: 100%;
-  padding: 0 30px;
+  padding-left: 30px;
 }
 
 .info__title h1 
 {
   color: var(--white);
+  display: flex;
+  align-items: center;
 }
 
 .info__title h1 i {
@@ -99,6 +101,12 @@ body
 {
   margin: 20px 0 10px 0;
   font-size: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.app h1 i {
+  margin-right: 10px;
 }
 
 .app p
@@ -261,6 +269,7 @@ body
   {
     margin-top: 30px;
     font-size: 30px;
+    display: flex;
   }
 
   .app .app__description p.description__label 
@@ -278,5 +287,20 @@ body
     width: 95%;
     margin-top: 0;
     padding: 20px 30px;
+  }
+}
+
+@media (max-width: 500px)
+{
+  .info__title h1 {
+    font-size: 28px;
+  }
+
+  .info__title {
+    margin-bottom: 10px;
+  }
+
+  .info__description p {
+    font-size: 16px;
   }
 }
