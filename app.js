@@ -10,6 +10,11 @@ function showBill()
   const containerToShow = document.querySelector(".realValue");
   const cost = calculateBill();
 
+  if(cost < 0)
+  {
+    swal("Error :(", "No hay precios negativos, fijate bien", "error");
+  }
+
   if(cost === 0) {
     swal("Error :(", "Al menos tenés que ingresar un precio", "error");
     return;
