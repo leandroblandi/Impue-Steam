@@ -13,6 +13,7 @@ function showBill()
   if(cost < 0)
   {
     swal("Error :(", "No hay precios negativos, fijate bien", "error");
+    return;
   }
 
   if(cost === 0) {
