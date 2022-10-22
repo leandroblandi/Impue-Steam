@@ -56,6 +56,11 @@ body
   color: var(--white);
 }
 
+.info__title h1 i {
+  color:var(--white);
+  margin-right: 10px;
+}
+
 .info .info__description 
 {
   width: 100%;
@@ -65,6 +70,8 @@ body
 }
 
 .info__description p {
+  font-weight: 200;
+  font-size: 18px;
   color: var(--white);
 }
 
