@@ -9,7 +9,8 @@
   outline: 0 none;
 }
 
-body {
+body 
+{
   background: url("./static/background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -65,7 +66,7 @@ body {
   color: #555;
 }
 
-.app input.costInput
+.app .app__calculator input.costEntry
 {
   margin: 10px 0 20px;
   background-color: #fff;
@@ -82,18 +83,25 @@ body {
   transform: all .3s;
 }
 
-.app input.costInput:focus
+.app .app__calculator input.costEntry:focus
 {
   border: 2px solid #555;
   transform: all .3s;
 }
 
-p.realValue {
+.app .app__calculator input.costEntry:invalid 
+{
+  border: 2px solid rgb(173, 92, 92);
+  transform: all .3s;
+}
+
+.app .app__calculator p.costResult 
+{
   color: rgb(212, 69, 181);
 }
 
 
-.app button.costButton 
+.app .app__calculator button.costButton 
 {
   margin-top: 15px;
  background: url("./static/background.png");
@@ -112,23 +120,26 @@ p.realValue {
  
 }
 
-.app button.costButton:hover
+.app .app__calculator button.costButton:hover
 {
   transition: all .3s;
   transform: scale(1.05);
 }
 
-small.more-info {
+.app .app_footer small.more-info 
+{
   margin-top: 20px;
 }
 
-small.more-info a {
+.app .app_footer small.more-info a 
+{
   text-decoration: none;
   font-weight: bold;
   color: #222;
 }
 
-small.more-info a:hover {
+.app .app_footer small.more-info a:hover 
+{
   text-decoration: underline;
 }
 
@@ -139,31 +150,42 @@ small.more-info a:hover {
     font-size: 50px;
   }
 
-  .app {
+  .app 
+  {
     width: 90%;
   }
 }
 
 @media (max-width:800px) 
 {
-  .app {
+
+  .app 
+  {
     margin-top: 15vh;
     padding: 30px 40px;
   }
-  h1.title {
+
+  .app .app__title h1.title 
+  {
     margin-top: 30px;
     font-size: 30px;
   }
-  p.comment {
+
+  .app .app__description p.description__label 
+  {
     font-size: 15px;
   }  
-  .app input.costInput {
+
+  .app .app__calculator input.costEntry 
+  {
     width: 95%;
   }
 
-  .app button.costButton {
+  .app .app__calculator button.costButton 
+  {
     width: 95%;
     margin-top: 0;
     padding: 20px 30px;
   }
+
 }

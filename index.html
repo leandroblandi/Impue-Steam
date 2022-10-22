@@ -16,12 +16,20 @@
 <body>
   <div class="container">
     <div class="app">
-      <h1 class="title">Impue-Steam</h1>
-      <p class="comment">Ingrese un importe en ARS$</p>
-      <input type="text" class="costInput" placeholder="$100.00" autocomplete="off">
-      <p class="realValue"></p>
-      <button class="costButton">Calcular</button>
-      <small class="more-info">Hecho por <a href="https://leandroblandi.netlify.app/">Leandro Blandi</a></small>
+      <div class="app__title">
+        <h1 class="title">Impue-Steam</h1>
+      </div>
+      <div class="app__description">
+        <p class="description__label">Ingrese un importe en ARS$</p>
+      </div>
+      <div class="app__calculator">
+        <input type="text" inputmode="numeric" class="costEntry" placeholder="$100.00" autocomplete="off">
+        <p class="costResult"></p>
+        <button class="costButton">Calcular</button>
+      </div>
+      <div class="app__footer">
+        <small class="more-info">Hecho por <a href="https://leandroblandi.netlify.app/">Leandro Blandi</a></small>
+      </div>
     </div>
   </div>
   <script src="https://kit.fontawesome.com/eb66d747aa.js" crossorigin="anonymous"></script>

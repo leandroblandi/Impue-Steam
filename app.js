@@ -1,13 +1,13 @@
 
 function calculateBill()
 {
-  const costValue = document.querySelector(".costInput");
+  const costValue = document.querySelector(".costEntry");
   return costValue.value * 1.75;
 }
 
 function showBill()
 {
-  const containerToShow = document.querySelector(".realValue");
+  const containerToShow = document.querySelector(".costResult");
   const cost = calculateBill();
 
   if(cost < 0)
@@ -32,7 +32,7 @@ function showBill()
 
 document.addEventListener("DOMContentLoaded", ()=> {
 
-  const calculateInput = document.querySelector(".costInput");
+  const calculateInput = document.querySelector(".costEntry");
   const calculateButton = document.querySelector(".costButton");
 
   calculateInput.addEventListener("keydown", (event)=> {
