@@ -31,6 +31,7 @@ body
 
 .container 
 {
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -44,16 +45,19 @@ body
   border-radius: 0 0 10px 10px;
 }
 
-.info .info__title {
+.info .info__title 
+{
   width: 100%;
   padding: 0 30px;
 }
 
-.info__title h1 {
+.info__title h1 
+{
   color: var(--white);
 }
 
-.info .info__description {
+.info .info__description 
+{
   width: 100%;
   text-align: justify;
   color: var(--white);
@@ -170,36 +174,53 @@ body
   color: var(--black);
 }
 
-.app .app_footer small.more-info a:hover 
+.app .app__footer small.more-info a:hover 
 {
   text-decoration: underline;
 }
 
-.footer {
-  align-self: flex-end;
-  width: 100%;
+.footer 
+{
+  margin: 0 auto;
+  height: auto;
+  width: 50%;
   background-color: var(--black);
   display: flex;
   justify-content: center;
+  border-radius: 10px;
 }
 
-.footer .icon {
+.footer .icon 
+{
   margin: 0 20px;
 }
 
-.footer .icon i {
+.footer .icon i 
+{
   display: block;
   font-size: 20px;
   padding: 30px;
 }
-.footer .icon a i {
+.footer .icon a i 
+{
   color: var(--white);
   transition: all .3s;
 }
 
-.footer .icon a i:hover {
+.footer .icon a i:hover 
+{
   color: var(--pink);
   transition: all .3s;
+}
+
+
+@media (max-width: 1400px)
+{
+  .footer
+  {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 @media (max-width:1100px) 
@@ -214,9 +235,11 @@ body
     width: 90%;
   }
 
-  .info {
+  .info 
+  {
     width: 90%;
   }
+
 }
 
 @media (max-width:800px) 
