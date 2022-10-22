@@ -10,6 +10,8 @@
   --white-seccondary: #efefef;
   --bg-black: #222;
   --popup-color: #595959;
+  --green: rgb(81, 138, 79);
+  --yellow: rgb(180, 140, 30);
 }
 
 *
@@ -174,7 +176,29 @@ button.help__button:hover {
 
 .app .app__calculator p.costResult 
 {
-  color: var(--pink);
+  color: var(--popup-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.app .app__calculator p.costResult img {
+  margin-left: 5px;
+}
+
+.cheaper {
+  color: var(--green);
+}
+
+.mediumCost
+{
+  color: var(--yellow);
+}
+
+.expensive
+{
+  color: var(--red);
 }
 
 
@@ -413,3 +437,4 @@ body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2
   background-repeat: no-repeat;
   background-size: cover;
 }
+
