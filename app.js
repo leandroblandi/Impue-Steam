@@ -26,11 +26,20 @@ function showBill()
 
 document.addEventListener("DOMContentLoaded", ()=> {
 
+  const calculateInput = document.querySelector(".costInput");
   const calculateButton = document.querySelector(".costButton");
 
-  calculateButton.addEventListener("click", (e)=> {
+  calculateInput.addEventListener("keydown", (event)=> {
 
-    e.preventDefault();
+    if(event.keyCode === 13) { // Si presiona Enter
+      event.preventDefault();
+      showBill();
+    }
+  });
+
+  calculateButton.addEventListener("click", (event)=> {
+
+    event.preventDefault();
     showBill();
   });
 });
