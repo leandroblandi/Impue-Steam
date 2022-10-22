@@ -81,6 +81,12 @@ body
 
 .info__help {
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.info__help img {
+  margin-left: 5px;
 }
 
 button.help__button {
@@ -202,11 +208,21 @@ button.help__button:hover {
   margin-top: 20px;
 }
 
+.app .app__footer small.more-info {
+  display: flex;
+  align-items: center;
+}
+
 .app .app__footer small.more-info a 
 {
+  margin-left: 5px;
   text-decoration: none;
   font-weight: bold;
   color: var(--black);
+}
+
+.app .app__footer small.more-info img {
+  margin-left: 5px;
 }
 
 .app .app__footer small.more-info a:hover 
