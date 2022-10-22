@@ -198,9 +198,14 @@ body
 .footer 
 {
   margin: 0 auto;
-  height: auto;
   width: 50%;
-  background-color: var(--black);
+  /*background-color: var(--black);*/
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.6px);
+  -webkit-backdrop-filter: blur(8.6px);
+  /*border: 1px solid rgba(255, 255, 255, 0.26);*/
   display: flex;
   justify-content: center;
   border-radius: 10px;
@@ -217,6 +222,12 @@ body
   font-size: 20px;
   padding: 30px;
 }
+
+.footer .icon a 
+{
+  text-decoration: none;
+}
+
 .footer .icon a i 
 {
   color: var(--white);
@@ -225,10 +236,9 @@ body
 
 .footer .icon a i:hover 
 {
-  color: var(--pink);
+  transform: scale(1.04);
   transition: all .3s;
 }
-
 
 @media (max-width: 1400px)
 {
