@@ -27,7 +27,7 @@ function showBill()
     return;
   }
 
-  containerToShow.innerText = "Te va a salir $" + parseFloat(cost);
+  containerToShow.innerText = "Te costará ARS$" + parseFloat(cost);
 }
 
 document.addEventListener("DOMContentLoaded", ()=> {
