@@ -2,7 +2,8 @@
 function calculateBill()
 {
   const costValue = document.querySelector(".costEntry");
-  return costValue.value * 1.75;
+
+  return costValue.value.replace(/,/g) * 1.75;
 }
 
 function showBill()
