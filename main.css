@@ -1,10 +1,23 @@
+:root
+{
+  --black: #222;
+  --black-seccondary: #555;
+  --pink: rgb(212, 69, 181);
+  --red: rgb(173, 92, 92);
+  --blue: rgba(31, 38, 135, 0.37);
+  --gray: #999;
+  --white: #fff;
+  --white-seccondary: #efefef;
+  --bg-black: #222;
+}
+
 *
 {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins";
-  color: #222;
+  color: var(--black);
   user-select: none;
   outline: 0 none;
 }
@@ -16,31 +29,50 @@ body
   background-size: cover;
 }
 
-.header 
-{
-  width: 100%;
-  text-align: center;
-  padding: 30px 20px;
-}
-
 .container 
 {
   width: 100%;
   display: flex;
-  justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+}
 
+.info {
+  margin: 0 auto;
+  padding: 40px 30px;
+  width: 50%;
+  background-color: var(--bg-black);
+  border-radius: 0 0 10px 10px;
+}
+
+.info .info__title {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.info__title h1 {
+  color: var(--white);
+}
+
+.info .info__description {
+  width: 100%;
+  text-align: justify;
+  color: var(--white);
+  padding: 0 30px;
+}
+
+.info__description p {
+  color: var(--white);
 }
 
 .app
 {
-  margin: 25vh auto;
+  margin: 30px auto;
   width: 50%;
   height: fit-content;
   padding: 50px 60px;
   border-radius: 10px;
-  background: #efefef;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  background: var(--white-seccondary);
+  box-shadow: 0 8px 32px 0 var(--blue);
   backdrop-filter: blur( 12.5px );
   -webkit-backdrop-filter: blur( 12.5px );
   border-radius: 10px;
@@ -63,14 +95,14 @@ body
   margin: 0 0 10px 0;
   font-size: 25px;
   font-weight: bold;
-  color: #555;
+  color: var(--black-seccondary);
 }
 
 .app .app__calculator input.costEntry
 {
   margin: 10px 0 20px;
-  background-color: #fff;
-  border: 2px solid #999;
+  background-color: var(--white);
+  border: 2px solid var(--gray);
   outline: 0 none;
   width: 60%;
   height: 60px;
@@ -85,19 +117,19 @@ body
 
 .app .app__calculator input.costEntry:focus
 {
-  border: 2px solid #555;
+  border: 2px solid var(--black-seccondary);
   transform: all .3s;
 }
 
 .app .app__calculator input.costEntry:invalid 
 {
-  border: 2px solid rgb(173, 92, 92);
+  border: 2px solid var(--red);
   transform: all .3s;
 }
 
 .app .app__calculator p.costResult 
 {
-  color: rgb(212, 69, 181);
+  color: var(--pink);
 }
 
 
@@ -108,7 +140,7 @@ body
  background-repeat: no-repeat;
  background-size: cover;
  border: none;
- color: #fff;
+ color: var(--white);
  font-weight: bold;
  font-size: 20px;
  padding: 15px 80px;
@@ -135,12 +167,39 @@ body
 {
   text-decoration: none;
   font-weight: bold;
-  color: #222;
+  color: var(--black);
 }
 
 .app .app_footer small.more-info a:hover 
 {
   text-decoration: underline;
+}
+
+.footer {
+  align-self: flex-end;
+  width: 100%;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.footer .icon {
+  margin: 0 20px;
+}
+
+.footer .icon i {
+  display: block;
+  font-size: 20px;
+  padding: 30px;
+}
+.footer .icon a i {
+  color: var(--white);
+  transition: all .3s;
+}
+
+.footer .icon a i:hover {
+  color: var(--pink);
+  transition: all .3s;
 }
 
 @media (max-width:1100px) 
@@ -154,6 +213,10 @@ body
   {
     width: 90%;
   }
+
+  .info {
+    width: 90%;
+  }
 }
 
 @media (max-width:800px) 
@@ -161,7 +224,6 @@ body
 
   .app 
   {
-    margin-top: 15vh;
     padding: 30px 40px;
   }
 
@@ -187,5 +249,4 @@ body
     margin-top: 0;
     padding: 20px 30px;
   }
-
 }
