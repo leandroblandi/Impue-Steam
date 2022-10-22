@@ -9,6 +9,7 @@
   --white: #fff;
   --white-seccondary: #efefef;
   --bg-black: #222;
+  --popup-color: #595959;
 }
 
 *
@@ -76,6 +77,24 @@ body
   font-weight: 200;
   font-size: 18px;
   color: var(--white);
+}
+
+.info__help {
+  width: 100%;
+}
+
+button.help__button {
+  margin-top: 10px;
+  margin-left: 30px;
+  background: inherit;
+  border: none;
+  color: var(--white);
+  font-weight: bold;
+}
+
+button.help__button:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .app
@@ -314,4 +333,67 @@ body
   .info__description p {
     font-size: 16px;
   }
+}
+
+
+/* Swal config */
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div.swal2-popup.helpAlert > div.swal2-header > div.swal2-icon.swal2-info.swal2-animate-info-icon {
+  color: var(--popup-color);
+  border-color: var(--popup-color);
+}
+
+body.swal2-shown > [aria-hidden="true"] {
+  filter: blur(10px);
+}
+
+.swal2-popup.helpAlert #swal2-content {
+  text-align: left !important;
+  padding: 0 30px;
+}
+
+.swal2-popup.helpAlert #swal2-content b {
+  color: var(--popup-color);
+}
+
+.swal2-popup.helpAlert #swal2-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+span.separator {
+  display: block;
+  border-top: 2px solid var(--gray);
+  width: 100%;
+  margin: 10px 0;
+}
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div.swal2-popup.helpAlert > div.swal2-actions > button.swal2-confirm.swal2-styled {
+  background: url("./static/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-warning.swal2-animate-warning-icon {
+  color: var(--popup-color);
+  border-color: var(--popup-color);
+}
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-error.swal2-animate-error-icon {
+  color: var(--popup-color);
+  border-color: var(--popup-color);
+}
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-error.swal2-animate-error-icon > span > span.swal2-x-mark-line-left {
+  background-color: var(--popup-color);
+}
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-error.swal2-animate-error-icon > span > span.swal2-x-mark-line-right {
+  background-color: var(--popup-color);
+}
+
+body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-actions > button.swal2-confirm.swal2-styled {
+  background: url("./static/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
