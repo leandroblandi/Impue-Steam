@@ -158,12 +158,12 @@ body
   transform: scale(1.05);
 }
 
-.app .app_footer small.more-info 
+.app .app__footer
 {
   margin-top: 20px;
 }
 
-.app .app_footer small.more-info a 
+.app .app__footer small.more-info a 
 {
   text-decoration: none;
   font-weight: bold;
