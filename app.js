@@ -34,7 +34,7 @@ function showBill()
     cheaperEmoji.width = 24;
     cheaperEmoji.height = 24;
 
-    containerToShow.innerHTML = "Te costará ARS<span class='cost cheaper'>&nbsp;$" + parseFloat(cost) + "(*)</span>";
+    containerToShow.innerHTML = "Te costará ARS<span class='cost cheaper'>&nbsp;$" + parseFloat(cost) + "<a href='#estimatedCostMessage'>(*)</a></span>";
     containerToShow.appendChild(cheaperEmoji);
   }
 
@@ -44,7 +44,7 @@ function showBill()
     mediumCostEmoji.width = 24;
     mediumCostEmoji.height = 24;
 
-    containerToShow.innerHTML = "Te costará ARS<span class='cost mediumCost'>&nbsp;$" + parseFloat(cost) + "(*)</span>";
+    containerToShow.innerHTML = "Te costará ARS<span class='cost mediumCost'>&nbsp;$" + parseFloat(cost) + "<a href='#estimatedCostMessage'>(*)</a></span>";
     containerToShow.appendChild(mediumCostEmoji);
   }
 
@@ -54,7 +54,7 @@ function showBill()
     expensiveEmoji.width = 24;
     expensiveEmoji.height = 24;
 
-    containerToShow.innerHTML = "Te costará ARS<span class='cost expensive'>&nbsp;$" + parseFloat(cost) + "(*)</span>";
+    containerToShow.innerHTML = "Te costará ARS<span class='cost expensive'>&nbsp;$" + parseFloat(cost) + "<a href='#estimatedCostMessage'>(*)</a></span>";
     containerToShow.appendChild(expensiveEmoji);
   }
 
