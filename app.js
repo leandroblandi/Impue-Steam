@@ -54,7 +54,7 @@ function showBill()
     expensiveEmoji.width = 24;
     expensiveEmoji.height = 24;
 
-    containerToShow.innerHTML = "Te costará ARS<span class='cost expensive'>&nbsp;$" + parseFloat(cost) + "</span>";
+    containerToShow.innerHTML = "Te costará ARS<span class='cost expensive'>&nbsp;$" + parseFloat(cost) + "(*)</span>";
     containerToShow.appendChild(expensiveEmoji);
   }
 
