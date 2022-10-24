@@ -379,6 +379,11 @@ button.help__button:hover {
   .info__description p {
     font-size: 16px;
   }
+
+  .app .app__calculator p.costResult
+  {
+    font-size: 18px;
+  }
 }
 
 
