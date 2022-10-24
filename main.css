@@ -122,8 +122,6 @@ button.help__button:hover {
   border-radius: 10px;
   background: var(--white-seccondary);
   box-shadow: 0 8px 32px 0 var(--blue);
-  backdrop-filter: blur( 12.5px );
-  -webkit-backdrop-filter: blur( 12.5px );
   border-radius: 10px;
   display: flex;
   flex-direction: column;
