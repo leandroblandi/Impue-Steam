@@ -12,6 +12,7 @@
   --popup-color: #595959;
   --green: rgb(81, 138, 79);
   --yellow: rgb(180, 140, 30);
+  --pink-seccondary: #e94979;
 }
 
 *
@@ -30,6 +31,12 @@ body
   background: url("./static/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.highlightedPhrase
+{
+  color: var(--white-seccondary);
+  font-size: 16px;
 }
 
 .container 
@@ -98,6 +105,7 @@ button.help__button {
   border: none;
   color: var(--white);
   font-weight: bold;
+  font-size: 18px;
 }
 
 button.help__button:hover {
