@@ -26,6 +26,10 @@
   outline: 0 none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body 
 {
   background: url("./static/background.png");
@@ -189,12 +193,18 @@ button.help__button:hover {
   align-items: center;
 }
 
+
 .app .app__calculator p.costResult img {
   margin-left: 5px;
 }
 
 .cheaper {
   color: var(--green);
+}
+
+.cheaper a, .mediumCost a, .expensive a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .mediumCost
