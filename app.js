@@ -54,7 +54,7 @@ function showBill()
     expensiveEmoji.width = 24;
     expensiveEmoji.height = 24;
 
-    containerToShow.innerHTML = "Te costará ARS<span class='cost expensive'>&nbsp;$" + parseFloat(cost) + "<a href='#estimatedCostMessage'>(*)</a></span>";
+    containerToShow.innerHTML = "Te costará ARS<span class='cost expensive'>&nbsp;$" + parseFloat(cost) + "<a class='estimatedCostAterisk' href='#estimatedCostMessage'>(*)</a></span>";
     containerToShow.appendChild(expensiveEmoji);
   }
 
@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", ()=> {
   const calculateInput = document.querySelector(".costEntry");
   const calculateButton = document.querySelector(".costButton");
   const helpButton = document.querySelector(".help__button");
+  const estimatedCostAterisk = document.querySelector(".estimatedCostAterisk");
+  const estimatedCostMessage = document.getElementById("estimatedCostMessage");
+
 
   helpButton.addEventListener("click", (e)=> {
     e.preventDefault();
@@ -97,5 +100,13 @@ document.addEventListener("DOMContentLoaded", ()=> {
     event.preventDefault();
     showBill();
   });
+
+  estimatedCostAterisk.addEventListener("click", (event)=> {
+    
+    e.preventDefault();
+
+    estimatedCostMessage.focus();
+
+  })
 });
 
