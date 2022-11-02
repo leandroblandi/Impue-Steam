@@ -463,6 +463,8 @@ body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2
 
 /* Pulse effect */
 
+/*
+
 @-webkit-keyframes pulse {
   0% {
     color: var(--white);
@@ -490,3 +492,5 @@ body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2
   -webkit-animation: pulse 0.8s ease-in-out infinite alternate;
   animation: pulse 0.8s ease-in-out infinite alternate;
 }
+
+*/

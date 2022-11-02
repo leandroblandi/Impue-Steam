@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
   const calculateInput = document.querySelector(".costEntry");
   const calculateButton = document.querySelector(".costButton");
   const helpButton = document.querySelector(".help__button");
-  const estimatedCostAterisk = document.querySelector(".estimatedCostAterisk");
-  const estimatedCostMessage = document.getElementById("estimatedCostMessage");
+  //const estimatedCostAterisk = document.querySelector(".estimatedCostAterisk");
+  //const estimatedCostMessage = document.getElementById("estimatedCostMessage");
 
 
   helpButton.addEventListener("click", (e)=> {
@@ -101,12 +101,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
     showBill();
   });
 
-  estimatedCostAterisk.addEventListener("click", (event)=> {
+  //estimatedCostAterisk.addEventListener("click", (event)=> {
     
-    e.preventDefault();
+    //e.preventDefault();
 
-    estimatedCostMessage.focus();
+   // estimatedCostMessage.focus();
 
-  })
+  //});
 });
 
