@@ -193,8 +193,8 @@ button.help__button:hover {
   align-items: center;
 }
 
-
-.app .app__calculator p.costResult img {
+.app .app__calculator p.costResult img 
+{
   margin-left: 5px;
 }
 
@@ -202,7 +202,8 @@ button.help__button:hover {
   color: var(--green);
 }
 
-.cheaper a, .mediumCost a, .expensive a {
+.cheaper a, .mediumCost a, .expensive a
+{
   color: inherit;
   text-decoration: none;
 }
@@ -459,3 +460,33 @@ body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2
   background-size: cover;
 }
 
+
+/* Pulse effect */
+
+@-webkit-keyframes pulse {
+  0% {
+    color: var(--white);
+  }
+  50% {
+    color: var(--pink-seccondary);
+  }
+  100% {
+    color: var(--white);
+  }
+}
+@keyframes pulse {
+  0% {
+    color: var(--white);
+  }
+  50% {
+    color: var(--pink-seccondary);
+  }
+  100% {
+    color: var(--white);
+  }
+}
+
+#estimatedCostMessage:focus {
+  -webkit-animation: pulse 0.8s ease-in-out infinite alternate;
+  animation: pulse 0.8s ease-in-out infinite alternate;
+}
