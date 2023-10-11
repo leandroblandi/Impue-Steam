@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" translate="no">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sencilla, fácil de usar y de interfaz amigable. Una de las mejores calculadoras para averiguar precio final de un juego en Steam. ">
+  <meta name="keywords" content="steam, tax, tax calculator, taxes, steam games, games, price, calculadora, impuestos, impuestos steam, impuesteam, calculadora de impuestos, comprar juegos, juegos steam">
+  <meta name="robots" content="index, follow">
+  <meta name="google" content="notranslate">
+  <meta name="title" content="Impue-Steam - Calculadora de Impuestos de Steam Argentina">
+  <link rel="canonical" href="https://impue-steam.netlify.app">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
@@ -11,36 +17,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="main.css">
-  <title>Impue-Steam | Calculadora de Impuestos de Steam Argentina</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Tax Calculator",
+      "name": "Impue-Steam",
+      "url": "https://impue-steam.netlify.app/" 
+    }
+  </script>
+  <title>Impue-Steam - Calculadora de Impuestos de Steam para Argentina</title>
 </head>
 <body>
   <div class="container">
-    <div class="info">
-      <div class="info__title">
-        <h1>
-          <i class="fa-regular fa-comment"></i>
-          Información
-        </h1>
-      </div>
-      <div class="info__description">
-        <p>
-          <b class="highlightedPhrase">Actualización 10/10/2023:</b>&nbsp;
-          Al día de la fecha, el porcentaje total de impuestos alcanza el 100%. Por lo que comprar un juego significa en realidad, comprarlo dos veces.
-        </p>
-        <b class="highlightedPhrase">Impuestos al día de la fecha:</b>
-        <ul class="fwhite">
-          <li>Percepción de Ganancias: 45%</li>
-          <li>Impuesto PAIS: 30%</li>
-          <li>Percepción de bienes personales: 25%</li>
-        </ul>
-      </div>
-      <div class="info__help">
-        <button class="help__button">
-          ¿Cómo usar?
-        </button>
-        <img src="./static/thinking_emoji.png" alt="🤔" width="24" height="24">
-      </div>
-    </div>
     <div class="app">
       <div class="app__title">
         <h1 class="title">
@@ -66,30 +54,64 @@
         </small>
       </div>
     </div>
+    <div class="info">
+      <div class="info__title">
+        <h1>
+          <i class="fa-solid fa-circle-info"></i>
+          Información
+        </h1>
+      </div>
+      <div class="info__description">
+        <p>
+        <b class="highlightedPhrase">Impuestos actualizados 10-10-2023 (100%)</b>
+        <ul class="fwhite">
+          <li>Percepción de Ganancias: 45%</li>
+          <li>Impuesto PAIS: 30%</li>
+          <li>Percepción de bienes personales: 25%</li>
+        </ul>
+      </div>
+      <div class="info__help">
+        <button class="help__button">
+          ¿Cómo usar?
+        </button>
+        <img src="./static/thinking_emoji.png" alt="🤔" width="24" height="24">
+      </div>
+    </div>
     <div class="colaborate">
       <div class="colaborate-header">
         <b>
           <i class="fa-solid fa-heart"></i>
-          Si deseás, podés apoyarme de la siguiente manera:
+          Si deseás y te gusta mi herramienta, podés apoyarme de la siguiente manera:
         </b>
       </div>
       <div class="colaborate-content">
         <ul>
           <li class="flex-li">
-            <b>Por MercadoPago mediante Cafecito</b>
+            <div class="flex-group">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <b>Por MercadoPago mediante Cafecito</b>
+            </div>
             <a href="https://cafecito.app/leanblandi">
               <i class="fa-solid fa-link"></i>
               Mi Cafecito
             </a>
           </li>
           <li class="flex-li">
-            <b>Por Alias:</b>
+            <div class="flex-group">
+              <i class="fa-solid fa-building-columns"></i>
+              <b>Por Alias:</b>
+            </div>
             <p>
               <i class="fa-solid fa-copy"></i>
               lean.blandi.mp
             </p>
           </li>
         </ul>
+        <div class="flex-group">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <b>Aclaración:</b>
+        </div>
+        <p class="disclaimerText">Esta página es <b>gratuita</b> y <b>no forma parte de Steam,</b> es solo una herramienta personal que decidí crear de manera independiente</p>
       </div>
     </div>
     <div class="footer">
