@@ -387,6 +387,10 @@ li.flex-li {
     margin-top: 0;
     padding: 20px 30px;
   }
+
+  .info .info__description {
+    text-align: left;
+  }
 }
 
 @media (max-width: 500px) {
