@@ -356,11 +356,9 @@ li.flex-li {
     font-size: 50px;
   }
 
-  .app {
-    width: 90%;
-  }
-
-  .info {
+  .app,
+  .info,
+  .colaborate {
     width: 90%;
   }
 }
