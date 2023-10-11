@@ -23,44 +23,46 @@ function showTax() {
     swal("Error :(", "Al menos tenés que ingresar un precio", "error");
     return;
   }
-  
+
   return;
-  }
-
-  if (cost > 0 && cost < 500) {
-    let cheaperEmoji = document.createElement("img");
-    cheaperEmoji.src = "./static/blushed_smile.png";
-    cheaperEmoji.width = 24;
-    cheaperEmoji.height = 24;
-
-    containerToShow.innerHTML =
-      "Te costará ARS<span class='cost cheaper'>&nbsp;$" +
-      parseFloat(cost).toFixed(2);
-    containerToShow.appendChild(cheaperEmoji);
-  } else if (cost >= 500 && cost < 2000) {
-    let mediumCostEmoji = document.createElement("img");
-    mediumCostEmoji.src = "./static/smile.png";
-    mediumCostEmoji.width = 24;
-    mediumCostEmoji.height = 24;
-
-    containerToShow.innerHTML = `Te costará ARS<span class='cost mediumCost'>&nbsp;$${parseFloat(
-      cost
-    ).toFixed(2)}`;
-    containerToShow.appendChild(mediumCostEmoji);
-  } else if (cost >= 2000) {
-    let expensiveEmoji = document.createElement("img");
-    expensiveEmoji.src = "./static/tearing_smile.png";
-    expensiveEmoji.width = 24;
-    expensiveEmoji.height = 24;
-
-    containerToShow.innerHTML =
-      "Te costará ARS<span class='cost expensive'>&nbsp;$" +
-      parseFloat(cost).toFixed(2);
-    containerToShow.appendChild(expensiveEmoji);
-  }
-
-  // Mostramos el valor si ninguna condicion es prevista
 }
+
+if (cost > 0 && cost < 500) {
+  let cheaperEmoji = document.createElement("img");
+
+  cheaperEmoji.src = "./static/blushed_smile.png";
+  cheaperEmoji.width = 24;
+  cheaperEmoji.height = 24;
+
+  containerToShow.innerHTML =
+    "Te costará ARS<span class='cost cheaper'>&nbsp;$" +
+    parseFloat(cost).toFixed(2);
+  containerToShow.appendChild(cheaperEmoji);
+} else if (cost >= 500 && cost < 2000) {
+  let mediumCostEmoji = document.createElement("img");
+
+  mediumCostEmoji.src = "./static/smile.png";
+  mediumCostEmoji.width = 24;
+  mediumCostEmoji.height = 24;
+
+  containerToShow.innerHTML =
+    "Te costará ARS<span class='cost mediumCost'>&nbsp;$" +
+    parseFloat(cost).toFixed(2);
+  containerToShow.appendChild(mediumCostEmoji);
+} else if (cost >= 2000) {
+  let expensiveEmoji = document.createElement("img");
+
+  expensiveEmoji.src = "./static/tearing_smile.png";
+  expensiveEmoji.width = 24;
+  expensiveEmoji.height = 24;
+
+  containerToShow.innerHTML =
+    "Te costará ARS<span class='cost expensive'>&nbsp;$" +
+    parseFloat(cost).toFixed(2);
+  containerToShow.appendChild(expensiveEmoji);
+}
+
+// Mostramos el valor si ninguna condicion es prevista
 
 function help() {
   return swal({
