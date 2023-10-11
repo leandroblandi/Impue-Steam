@@ -10,8 +10,12 @@ function showTax() {
   const containerToShow = document.querySelector(".costResult");
   const cost = calculateTax();
 
-  if (cost < 0) {
-    swal("Error :(", "No hay precios negativos, fijate bien", "error");
+  if (cost < 0 || isNaN(cost)) {
+    swal(
+      "Error :(",
+      "Al parecer no ingresaste un precio válido para la App",
+      "error"
+    );
     return;
   }
 
@@ -19,14 +23,8 @@ function showTax() {
     swal("Error :(", "Al menos tenés que ingresar un precio", "error");
     return;
   }
-
-  if (isNaN(cost)) {
-    swal(
-      "Cuidado :O",
-      "Al parecer no ingresaste un precio válido para la App",
-      "warning"
-    );
-    return;
+  
+  return;
   }
 
   if (cost > 0 && cost < 500) {
@@ -37,8 +35,7 @@ function showTax() {
 
     containerToShow.innerHTML =
       "Te costará ARS<span class='cost cheaper'>&nbsp;$" +
-      parseFloat(cost) +
-      "<a href='#estimatedCostMessage'>(*)</a></span>";
+      parseFloat(cost).toFixed(2);
     containerToShow.appendChild(cheaperEmoji);
   } else if (cost >= 500 && cost < 2000) {
     let mediumCostEmoji = document.createElement("img");
@@ -48,7 +45,7 @@ function showTax() {
 
     containerToShow.innerHTML = `Te costará ARS<span class='cost mediumCost'>&nbsp;$${parseFloat(
       cost
-    )} <a href='#estimatedCostMessage'>(*)</a></span>`;
+    ).toFixed(2)}`;
     containerToShow.appendChild(mediumCostEmoji);
   } else if (cost >= 2000) {
     let expensiveEmoji = document.createElement("img");
@@ -58,8 +55,7 @@ function showTax() {
 
     containerToShow.innerHTML =
       "Te costará ARS<span class='cost expensive'>&nbsp;$" +
-      parseFloat(cost) +
-      "<a class='estimatedCostAterisk' href='#estimatedCostMessage'>(*)</a></span>";
+      parseFloat(cost).toFixed(2);
     containerToShow.appendChild(expensiveEmoji);
   }
 
