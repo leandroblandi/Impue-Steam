@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const costInput = document.querySelector(".costEntry");
   const calculateButton = document.querySelector(".costButton");
   const helpButton = document.querySelector(".help__button");
-  const copyButton = document.querySelector("i.copy-alias");
+  const copyButton = document.querySelector("p.copy-alias");
 
   helpButton.addEventListener("click", (e) => {
     e.preventDefault();
