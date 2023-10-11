@@ -1,5 +1,4 @@
-:root
-{
+:root {
   --black: #222;
   --black-seccondary: #555;
   --pink: rgb(212, 69, 181);
@@ -15,8 +14,7 @@
   --pink-seccondary: #e94979;
 }
 
-*
-{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -30,22 +28,26 @@ html {
   scroll-behavior: smooth;
 }
 
-body 
-{
+body {
   background: url("./static/background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.highlightedPhrase
-{
+.highlightedPhrase {
   color: var(--white-seccondary);
   font-size: 16px;
 }
 
-.container 
-{
+ul.fwhite {
+  padding-left: 20px;
+}
 
+ul.fwhite li {
+  color: var(--white-seccondary);
+}
+
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -59,26 +61,23 @@ body
   border-radius: 0 0 10px 10px;
 }
 
-.info .info__title 
-{
+.info .info__title {
   width: 100%;
   padding-left: 30px;
 }
 
-.info__title h1 
-{
+.info__title h1 {
   color: var(--white);
   display: flex;
   align-items: center;
 }
 
 .info__title h1 i {
-  color:var(--white);
+  color: var(--white);
   margin-right: 10px;
 }
 
-.info .info__description 
-{
+.info .info__description {
   width: 100%;
   text-align: justify;
   color: var(--white);
@@ -117,8 +116,7 @@ button.help__button:hover {
   cursor: pointer;
 }
 
-.app
-{
+.app {
   margin: 30px auto;
   width: 50%;
   height: fit-content;
@@ -132,11 +130,10 @@ button.help__button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-width: 250px
+  min-width: 250px;
 }
 
-.app h1
-{
+.app h1 {
   margin: 20px 0 10px 0;
   font-size: 60px;
   display: flex;
@@ -147,16 +144,14 @@ button.help__button:hover {
   margin-right: 10px;
 }
 
-.app p
-{
+.app p {
   margin: 0 0 10px 0;
   font-size: 25px;
   font-weight: bold;
   color: var(--black-seccondary);
 }
 
-.app .app__calculator input.costEntry
-{
+.app .app__calculator input.costEntry {
   margin: 10px 0 20px;
   background-color: var(--white);
   border: 2px solid var(--gray);
@@ -166,26 +161,23 @@ button.help__button:hover {
   padding-left: 5px;
   font-size: 40px;
   text-align: center;
-  transition: all .2s;
+  transition: all 0.2s;
   border-radius: 4px;
   font-family: "Source Code Pro";
-  transform: all .3s;
+  transform: all 0.3s;
 }
 
-.app .app__calculator input.costEntry:focus
-{
+.app .app__calculator input.costEntry:focus {
   border: 2px solid var(--black-seccondary);
-  transform: all .3s;
+  transform: all 0.3s;
 }
 
-.app .app__calculator input.costEntry:invalid 
-{
+.app .app__calculator input.costEntry:invalid {
   border: 2px solid var(--red);
-  transform: all .3s;
+  transform: all 0.3s;
 }
 
-.app .app__calculator p.costResult 
-{
+.app .app__calculator p.costResult {
   color: var(--popup-color);
   display: flex;
   flex-direction: row;
@@ -193,8 +185,7 @@ button.help__button:hover {
   align-items: center;
 }
 
-.app .app__calculator p.costResult img 
-{
+.app .app__calculator p.costResult img {
   margin-left: 5px;
 }
 
@@ -202,50 +193,44 @@ button.help__button:hover {
   color: var(--green);
 }
 
-.cheaper a, .mediumCost a, .expensive a
-{
+.cheaper a,
+.mediumCost a,
+.expensive a {
   color: inherit;
   text-decoration: none;
 }
 
-.mediumCost
-{
+.mediumCost {
   color: var(--yellow);
 }
 
-.expensive
-{
+.expensive {
   color: var(--red);
 }
 
-
-.app .app__calculator button.costButton 
-{
+.app .app__calculator button.costButton {
   margin-top: 15px;
- background: url("./static/background.png");
- background-repeat: no-repeat;
- background-size: cover;
- border: none;
- color: var(--white);
- font-weight: bold;
- font-size: 20px;
- padding: 15px 80px;
- width: 60%;
- cursor: pointer;
- transition: all .3s;
- text-align: center;
- border-radius: 4px;
- 
+  background: url("./static/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px 80px;
+  width: 60%;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  border-radius: 4px;
 }
 
-.app .app__calculator button.costButton:hover
-{
-  transition: all .3s;
+.app .app__calculator button.costButton:hover {
+  transition: all 0.3s;
   transform: scale(1.05);
 }
 
-.app .app__footer
-{
+.app .app__footer {
   margin-top: 20px;
 }
 
@@ -254,8 +239,7 @@ button.help__button:hover {
   align-items: center;
 }
 
-.app .app__footer small.more-info a 
-{
+.app .app__footer small.more-info a {
   margin-left: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -266,13 +250,62 @@ button.help__button:hover {
   margin-left: 5px;
 }
 
-.app .app__footer small.more-info a:hover 
-{
+.app .app__footer small.more-info a:hover {
   text-decoration: underline;
 }
 
-.footer 
-{
+.colaborate {
+  margin: 0 auto 30px;
+  width: 50%;
+  height: fit-content;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.6px);
+  -webkit-backdrop-filter: blur(8.6px);
+  /*border: 1px solid rgba(255, 255, 255, 0.26);*/
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 250px;
+}
+
+.colaborate-header {
+  margin-right: 10px;
+}
+
+.colaborate .colaborate-header b,
+.colaborate .colaborate-header b i,
+.colaborate-content b {
+  color: var(--white-seccondary);
+}
+
+.colaborate-content a,
+.colaborate-content a i,
+.colaborate-content p,
+.colaborate-content p i {
+  user-select: all;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--black-seccondary);
+}
+
+.colaborate-content a:hover {
+  text-decoration: underline;
+}
+
+.colaborate-content ul li {
+  list-style-type: none;
+}
+
+li.flex-li {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
   margin: 0 auto;
   width: 50%;
   /*background-color: var(--black);*/
@@ -287,98 +320,78 @@ button.help__button:hover {
   border-radius: 10px;
 }
 
-.footer .icon 
-{
+.footer .icon {
   margin: 0 20px;
 }
 
-.footer .icon i 
-{
+.footer .icon i {
   display: block;
   font-size: 20px;
   padding: 30px;
 }
 
-.footer .icon a 
-{
+.footer .icon a {
   text-decoration: none;
 }
 
-.footer .icon a i 
-{
+.footer .icon a i {
   color: var(--white);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.footer .icon a i:hover 
-{
+.footer .icon a i:hover {
   transform: scale(1.04);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-@media (max-width: 1400px)
-{
-  .footer
-  {
+@media (max-width: 1400px) {
+  .footer {
     width: 100%;
     border-radius: 0;
   }
 }
 
-@media (max-width:1100px) 
-{
-  h1.title
-  {
+@media (max-width: 1100px) {
+  h1.title {
     font-size: 50px;
   }
 
-  .app 
-  {
+  .app {
     width: 90%;
   }
 
-  .info 
-  {
+  .info {
     width: 90%;
   }
-
 }
 
-@media (max-width:800px) 
-{
-
-  .app 
-  {
+@media (max-width: 800px) {
+  .app {
     padding: 30px 40px;
   }
 
-  .app .app__title h1.title 
-  {
+  .app .app__title h1.title {
     margin-top: 30px;
     font-size: 30px;
     display: flex;
   }
 
-  .app .app__description p.description__label 
-  {
+  .app .app__description p.description__label {
     font-size: 15px;
-  }  
+  }
 
-  .app .app__calculator input.costEntry 
-  {
+  .app .app__calculator input.costEntry {
     width: 95%;
   }
 
-  .app .app__calculator button.costButton 
-  {
+  .app .app__calculator button.costButton {
     width: 95%;
     margin-top: 0;
     padding: 20px 30px;
   }
 }
 
-@media (max-width: 500px)
-{
+@media (max-width: 500px) {
   .info__title h1 {
     font-size: 28px;
   }
@@ -391,16 +404,18 @@ button.help__button:hover {
     font-size: 16px;
   }
 
-  .app .app__calculator p.costResult
-  {
+  .app .app__calculator p.costResult {
     font-size: 18px;
   }
 }
 
-
 /* Swal config */
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div.swal2-popup.helpAlert > div.swal2-header > div.swal2-icon.swal2-info.swal2-animate-info-icon {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div.swal2-popup.helpAlert
+  > div.swal2-header
+  > div.swal2-icon.swal2-info.swal2-animate-info-icon {
   color: var(--popup-color);
   border-color: var(--popup-color);
 }
@@ -430,36 +445,63 @@ span.separator {
   margin: 10px 0;
 }
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div.swal2-popup.helpAlert > div.swal2-actions > button.swal2-confirm.swal2-styled {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div.swal2-popup.helpAlert
+  > div.swal2-actions
+  > button.swal2-confirm.swal2-styled {
   background: url("./static/background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-warning.swal2-animate-warning-icon {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div
+  > div.swal2-header
+  > div.swal2-icon.swal2-warning.swal2-animate-warning-icon {
   color: var(--popup-color);
   border-color: var(--popup-color);
 }
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-error.swal2-animate-error-icon {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div
+  > div.swal2-header
+  > div.swal2-icon.swal2-error.swal2-animate-error-icon {
   color: var(--popup-color);
   border-color: var(--popup-color);
 }
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-error.swal2-animate-error-icon > span > span.swal2-x-mark-line-left {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div
+  > div.swal2-header
+  > div.swal2-icon.swal2-error.swal2-animate-error-icon
+  > span
+  > span.swal2-x-mark-line-left {
   background-color: var(--popup-color);
 }
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > div.swal2-icon.swal2-error.swal2-animate-error-icon > span > span.swal2-x-mark-line-right {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div
+  > div.swal2-header
+  > div.swal2-icon.swal2-error.swal2-animate-error-icon
+  > span
+  > span.swal2-x-mark-line-right {
   background-color: var(--popup-color);
 }
 
-body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-actions > button.swal2-confirm.swal2-styled {
+body
+  > div.swal2-container.swal2-center.swal2-fade.swal2-shown
+  > div
+  > div.swal2-actions
+  > button.swal2-confirm.swal2-styled {
   background: url("./static/background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 /* Pulse effect */
 
