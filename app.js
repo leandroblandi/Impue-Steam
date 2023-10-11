@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const costInput = document.querySelector(".costEntry");
   const calculateButton = document.querySelector(".costButton");
   const helpButton = document.querySelector(".help__button");
+  const copyButton = document.querySelector("i.copy-alias");
 
   helpButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -28,6 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
   calculateButton.addEventListener("click", (e) => {
     e.preventDefault();
     taxCalculator.showTax();
+  });
+
+  copyButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    taxCalculator.tool.copyAliasToClipboard();
   });
 });
 
@@ -124,6 +130,32 @@ class Tool {
       emoji.src = "./static/tearing_smile.png";
     }
     return emoji;
+  }
+
+  /**
+   * Copia al portapapeles el alias de MP
+   * @returns {boolean} true si se copió correctamente, false si no
+   */
+  copyAliasToClipboard() {
+    const alias = document.querySelector("span.alias-mp");
+
+    const range = document.createRange();
+    range.selectNode(alias);
+
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+
+    try {
+      document.execCommand("copy");
+      swal("Exitoso", "Se copió el alias correctamente al portapapeles");
+      return true;
+    } catch (error) {
+      swal(
+        "Error",
+        "Hubo un problema al intentar copiar al portapapeles. Tip: podés seleccionar el texto del alias y copiarlo manualmente"
+      );
+      return false;
+    }
   }
 
   /**

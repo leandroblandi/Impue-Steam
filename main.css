@@ -287,12 +287,16 @@ button.help__button:hover {
 
 .colaborate-content a,
 .colaborate-content a i,
-.colaborate-content p,
+.colaborate-content p span,
 .colaborate-content p i {
   user-select: all;
   text-decoration: none;
   font-weight: 600;
   color: var(--black-seccondary);
+}
+
+.colaborate-content p i {
+  cursor: pointer;
 }
 
 .flex-group {
