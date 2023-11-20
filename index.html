@@ -37,10 +37,10 @@
         </h1>
       </div>
       <div class="app__description">
-        <p class="description__label">Ingrese un importe en ARS$</p>
+        <p class="description__label">Ingrese un importe en US$</p>
       </div>
       <div class="app__calculator">
-        <input type="text" inputmode="numeric" class="costEntry" placeholder="$100.00" autocomplete="off">
+        <input type="text" inputmode="numeric" class="costEntry" placeholder="US$10" autocomplete="off">
         <p class="costResult">
           <span class="cost"></span>
         </p>
@@ -64,19 +64,32 @@
       <div class="info__description">
         <div class="more-info">
           <b class="highlightedPhrase">Noticia importante</b>
-          <p>A partir del 20 de noviembre de 2023, Steam ha anunciado que los precios y carteras de Argentina, se convertirán a USD (Dólares)</p>
-          <a class="link" href="https://help.steampowered.com/en/faqs/view/2720-4EC7-B95A-1D2A">Haga click aquí para más información</a>
+          <p>
+            A partir del 20 de noviembre de 2023, Steam ha anunciado que los precios y carteras de Argentina, se convertirán a USD:
+          </p>
+          <a class="link" href="https://help.steampowered.com/en/faqs/view/2720-4EC7-B95A-1D2A">
+            <i class="fa-solid fa-link"></i>
+            Haga click aquí para más información
+          </a>
         </div>
-        <b class="highlightedPhrase">Impuestos actualizados 10-10-2023 (100%)</b>
-        <ul class="fwhite">
+        <!-- <b class="highlightedPhrase">Impuestos actualizados 10-10-2023 (100%)</b> -->
+        <!-- <ul class="fwhite">
           <li>Percepción de Ganancias: 45%</li>
           <li>Impuesto PAIS: 30%</li>
           <li>Percepción de bienes personales: 25%</li>
-        </ul>
+        </ul> -->
+        <b class="highlightedPhrase">Cotización</b>
+        <p class="white">
+          La aplicación funciona gracias a DolarAPI, la cual nos brinda datos actualizados respecto a las diferentes cotizaciones del dólar. Si querés saber más, ingresá al enlace de abajo:
+        </p>
+        <a class="link block" href="https://dolarapi.com/docs/">
+          <i class="fa-solid fa-link"></i>
+          DolarAPI
+        </a>
       </div>
       <div class="info__help">
         <button class="help__button">
-          ¿Cómo usar?
+          ¿No sabés como usar la app? Presioná acá
         </button>
         <img src="./static/thinking_emoji.png" alt="🤔" width="24" height="24">
       </div>

@@ -1,13 +1,6 @@
-/**
- * La cantidad actual en steam al día de la fecha
- * 10/10/2023 es de:
- * 45% + 25% + 30% = 100%
- * Por ende, se calcula dos veces el precio
- */
 document.addEventListener("DOMContentLoaded", () => {
-  const taxAmount = 2;
+  const taxAmount = 1;
   const taxCalculator = new TaxCalculator(taxAmount);
-
   const costInput = document.querySelector(".costEntry");
   const calculateButton = document.querySelector(".costButton");
   const helpButton = document.querySelector(".help__button");
@@ -47,14 +40,28 @@ class TaxCalculator {
   }
 
   /**
+   * Consume la API: Dolar API
+   * Link de la misma: https://dolarapi.com/
+   * @returns El valor de venta de Dólar tarjeta al momento
+   */
+  async getDollarValueFromApi() {
+    const response = await fetch("https://dolarapi.com/v1/dolares/tarjeta");
+    const data = await response.json();
+    return parseInt(data.venta);
+  }
+
+  /**
    * Calcula el impuesto en base al atributo this.taxAmount (asignado en el constructor)
    * @returns El valor final del producto con impuestos incluidos
    */
-  calculateTax() {
-    const inputValueWithoutComma = document
-      .querySelector(".costEntry")
-      .value.replace(/,/g, ".");
-    return inputValueWithoutComma * this.taxAmount;
+  async calculateTax() {
+    const dollarValue = await this.getDollarValueFromApi();
+
+    const inputValueWithoutComma = parseFloat(
+      document.querySelector(".costEntry").value.replace(/,/g, ".")
+    );
+
+    return inputValueWithoutComma * dollarValue * this.taxAmount;
   }
 
   /**
@@ -62,9 +69,9 @@ class TaxCalculator {
    * Y luego inserta el precio y la imagen para que el usuario pueda verla
    * @returns Solo retorna false en caso de que el precio cumpla con las condiciones de validez
    */
-  showTax() {
+  async showTax() {
     const taxContainer = document.querySelector(".costResult");
-    const finalCost = this.calculateTax();
+    const finalCost = await this.calculateTax();
 
     if (finalCost === 0) {
       swal("Error", "Debes ingresar un precio. Ejemplo: 1000");
@@ -82,9 +89,7 @@ class TaxCalculator {
     const img = this.tool.createEmojiImage(finalCost);
     const costClass = this.tool.getCostClassByNumericCost(finalCost);
 
-    taxContainer.innerHTML = `Precio&nbsp;final: ARS<span class='cost ${costClass}'>&nbsp;$${parseFloat(
-      finalCost
-    ).toFixed(2)}`;
+    taxContainer.innerHTML = `Precio final:&nbsp;<span class='cost ${costClass}'>AR$${finalCost}`;
     taxContainer.appendChild(img);
   }
 }
@@ -164,7 +169,7 @@ class Tool {
   help() {
     return swal({
       title: "¡Hola! ¿Necesitás ayuda?",
-      html: "Esta app es súper sencilla de utilizar. Primero que nada:<br><span class='separator'></span><div class='steps'><b>1.</b> Te dirigís a la página de Steam y mirás el precio del juego que desees comprar<br></div><div class='steps'><b>2.</b> Escribís el precio que viste en la entrada de esta página<br></div><div class='steps'><b>3.</b> Presionás en 'Calcular'</div><span class='separator'></span>¡Y listo! Ya te devuelve el precio final que estarías pagando",
+      html: "Esta app es súper sencilla de utilizar. Primero que nada:<br><span class='separator'></span><div class='steps'><b>1.</b> Te dirigís a la página de Steam y mirás el precio del juego que desees comprar<br></div><div class='steps'><b>2.</b> Escribís el precio que viste en la entrada de esta página (en US$)<br></div><div class='steps'><b>3.</b> Presionás en 'Calcular'</div><span class='separator'></span>¡Y listo! Ya te devuelve el precio final que estarías pagando",
       confirmButtonText: "Adelante",
       type: "info",
       customClass: "helpAlert",
