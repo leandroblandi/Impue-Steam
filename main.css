@@ -65,6 +65,10 @@ ul.fwhite li {
   flex-direction: column;
 }
 
+.flex-group {
+  margin-top: 10px;
+}
+
 .app {
   margin: 0 auto 10px;
   width: 50%;
