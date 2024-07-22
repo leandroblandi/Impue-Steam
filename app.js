@@ -47,7 +47,7 @@ class TaxCalculator {
   async getDollarValueFromApi() {
     const response = await fetch("https://dolarapi.com/v1/dolares/tarjeta");
     const data = await response.json();
-    return parseInt(data.venta);
+    return parseFloat(data.venta).toFixed(2);
   }
 
   /**
@@ -61,7 +61,7 @@ class TaxCalculator {
       document.querySelector(".costEntry").value.replace(/,/g, ".")
     );
 
-    return inputValueWithoutComma * dollarValue * this.taxAmount;
+    return parseFloat(inputValueWithoutComma * dollarValue * this.taxAmount).toFixed(2);
   }
 
   /**
